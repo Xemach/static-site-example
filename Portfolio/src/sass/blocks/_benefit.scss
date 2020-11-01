@@ -1,0 +1,87 @@
+.benefit {
+    width: 100%;
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+            &:before {
+                top: -25%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__skills {
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr) );
+        grid-template-rows: auto;
+        grid-gap: 13px;
+    }
+    &__skill {
+         padding: 30px;
+        border: 1px solid #000000;
+        &-jquery {
+            padding-top: 15px;
+        }
+        &-mongo {
+            padding-top: 8px;
+        }
+        &-title {
+            padding-top: 20px;
+        }
+        &-text {
+            padding-top: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .title__jquery {
+        padding-top: 32px;
+    }
+    &__title-mongo {
+        padding-top: 33px;
+    }
+    &__progress {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-row: auto;
+        column-gap: 45px;
+        row-gap: 30px;
+        &-item {
+            .item__title-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .progress__title {
+                padding-left: 14px;
+                position: relative;
+                @include before_circle;
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: -8px;
+                }
+            }
+            .progress__item-upper {
+                width: 100%;
+                height: 14px;
+                background: #E8E4DE;
+                border-radius: 4px;
+            }
+            .progress__item-under {
+                width: 350px; 
+                height: 14px; 
+                background-color: #FFA501;
+                border-radius: 4px; 
+                margin-top: 27px;
+            }
+        }
+    }
+}
